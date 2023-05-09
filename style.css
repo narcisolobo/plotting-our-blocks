@@ -1,41 +1,55 @@
-* {
-  box-sizing: border-box;
-}
-
 .container {
   width: 950px;
   background-color: silver;
-  padding: 15px;
   margin: 0px auto;
+  /* padding takes care of the gutter around the perimeter */
+  padding: 15px;
 }
 .top-nav {
   height: 150px;
   background-color: green;
-  margin-bottom: 20px;
+  /* all that's needed is a little margin bottom here */
+  margin-bottom: 15px;
 }
 .side-nav {
   height: 300px;
   width: 200px;
   background-color: blue;
-  margin-right: 14px;
+  /*
+  this needs to be side-by-side with main
+  so both must be display: inline-block
+  */
   display: inline-block;
-  vertical-align: top;
+  /* push the main div away a little on the right */
+  margin-right: 14px;
 }
 .main {
   height: 400px;
   width: 700px;
   background-color: red;
+  /*
+  this needs to be side-by-side with side-nav
+  so both must be display: inline-block
+  */
   display: inline-block;
+  /* align it with its neighbor with vertical-align */
+  vertical-align: top;
+  /* this box needs a perimeter gutter, too */
+  padding: 15px;
 }
 .sub-content {
   height: 200px;
   width: 210px;
   background-color: yellow;
-  outline: 1px dashed black;
+  /* these need to be side-by-side with each other */
   display: inline-block;
+  /* add a little gap between them */
+  margin-right: 9px;
 }
 #advertisement {
   height: 120px;
   width: 660px;
   background-color: purple;
+  /* push this box away from the yellow boxes */
+  margin-top: 15px;
 }
